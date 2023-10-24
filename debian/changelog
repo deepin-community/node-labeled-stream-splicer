@@ -1,5 +1,72 @@
-template-repository (1.0-1) unstable; urgency=medium
+node-labeled-stream-splicer (2.0.2+~2.0.0-2) unstable; urgency=medium
 
-  * Initial release
+  [ Debian Janitor ]
+  * Apply multi-arch hints. + node-labeled-stream-splicer: Add Multi-Arch: foreign.
 
- -- Tsic404 <liuheng@deepin.org>  Sat, 28 Jan 2023 13:46:49 +0800
+ -- Jelmer Vernooĳ <jelmer@debian.org>  Wed, 07 Dec 2022 23:20:19 +0000
+
+node-labeled-stream-splicer (2.0.2+~2.0.0-1) unstable; urgency=medium
+
+  * Team upload
+  * Fix GitHub tags regex
+  * Add missing build dependency on dh addon.
+  * Update standards version to 4.6.0, no changes needed.
+  * Fix filenamemangle
+  * Embed typescript declarations and repack
+
+ -- Yadd <yadd@debian.org>  Mon, 03 Jan 2022 15:45:07 +0100
+
+node-labeled-stream-splicer (2.0.2-4) unstable; urgency=medium
+
+  * Team upload
+  * Force rebuild
+
+ -- Xavier Guimard <yadd@debian.org>  Mon, 18 Jan 2021 15:16:51 +0100
+
+node-labeled-stream-splicer (2.0.2-3) unstable; urgency=medium
+
+  * Team upload
+  * Use tape instead of tap in test (fixes timeout issues)
+
+ -- Xavier Guimard <yadd@debian.org>  Wed, 13 Jan 2021 15:28:57 +0100
+
+node-labeled-stream-splicer (2.0.2-2) unstable; urgency=medium
+
+  * Team upload
+
+  [ Debian Janitor ]
+  * Set upstream metadata fields: Bug-Database, Bug-Submit, Repository,
+    Repository-Browse.
+  * Update standards version to 4.5.0, no changes needed.
+
+  [ Xavier Guimard ]
+  * Bump debhelper compatibility level to 13
+  * Declare compliance with policy 4.5.1
+  * Add "Rules-Requires-Root: no"
+  * Add debian/gbp.conf
+  * Use dh-sequence-nodejs auto test & install
+
+ -- Xavier Guimard <yadd@debian.org>  Wed, 13 Jan 2021 15:21:47 +0100
+
+node-labeled-stream-splicer (2.0.2-1) unstable; urgency=medium
+
+  * New upstream version: drop require isarray
+  * Move to /usr/share
+  * Bump policy (no changes)
+
+ -- Bastien Roucariès <rouca@debian.org>  Mon, 16 Sep 2019 12:26:30 +0200
+
+node-labeled-stream-splicer (2.0.1-1) unstable; urgency=medium
+
+  * Move to salsa
+  * Include a fix of test suite from upstream
+  * Bump compat and policy (no changes)
+  * Ship examples
+
+ -- Bastien Roucariès <rouca@debian.org>  Sun, 20 May 2018 21:59:07 +0200
+
+node-labeled-stream-splicer (2.0.0-1) unstable; urgency=low
+
+  * Initial release (Closes: #881863)
+
+ -- Bastien Roucariès <rouca@debian.org>  Thu, 30 Nov 2017 10:48:19 +0100
