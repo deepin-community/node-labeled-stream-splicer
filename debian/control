@@ -1,15 +1,40 @@
-Source: template-repository
-Section: unknown
+Source: node-labeled-stream-splicer
+Section: javascript
 Priority: optional
-Maintainer: Tsic404 <liuheng@deepin.org>
-Build-Depends: debhelper (>= 11)
-Standards-Version: 4.1.3
-Homepage: https://github.com/deepin-community/template-repository
-#Vcs-Browser: https://salsa.debian.org/debian/deepin-community-template-repository
-#Vcs-Git: https://salsa.debian.org/debian/deepin-community-template-repository.git
+Maintainer: Debian Javascript Maintainers <pkg-javascript-devel@lists.alioth.debian.org>
+Uploaders: Bastien Roucariès <rouca@debian.org>
+Build-Depends: debhelper
+ , debhelper-compat (= 13)
+ , dh-sequence-nodejs
+ , node-browser-pack <!nocheck>
+ , node-concat-stream <!nocheck>
+ , node-inherits <!nocheck>
+ , node-module-deps <!nocheck>
+ , node-stream-splicer <!nocheck>
+ , node-tape <!nocheck>
+ , node-through <!nocheck>
+Standards-Version: 4.6.0
+Vcs-Browser: https://salsa.debian.org/js-team/node-labeled-stream-splicer
+Vcs-Git: https://salsa.debian.org/js-team/node-labeled-stream-splicer.git
+Homepage: https://github.com/substack/labeled-stream-splicer
+Testsuite: autopkgtest-pkg-nodejs
+Rules-Requires-Root: no
 
-Package: template-repository
-Architecture: any
-Depends: ${shlibs:Depends}, ${misc:Depends}
-Description: <insert up to 60 chars description>
- <insert long description, indented with spaces>
+Package: node-labeled-stream-splicer
+Architecture: all
+Depends: ${misc:Depends}
+ , node-inherits
+ , node-stream-splicer
+Provides: ${nodejs:Provides}
+Multi-Arch: foreign
+Description: streaming pipeline with a mutable configuration and labels
+ This modules allows one to create a pipeline duplex stream given an
+ array of streams. Each stream will be piped to the next.
+ .
+ Streams could also be added and removed dynamically at runtime.
+ Every stream could be associated with a string (label).
+ .
+ This a dependency of browserify. Browserify is a javaScript tool that allows
+ developers to write Node.js-style modules that compile for use in the browser.
+ .
+ Node.js is an event-based server-side JavaScript engine
